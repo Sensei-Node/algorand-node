@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  node:
+    image: senseinode/algorand:1.0
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "80:8080"
+    environment:
+      - ALGORAND_DATA=/node/data
+      - PATH=/node:$PATH
+    volumes: 
+      - node_data:/node/data
+
+volumes: 
+  node_data:
