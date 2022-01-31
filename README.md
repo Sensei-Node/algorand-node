@@ -29,7 +29,9 @@ Once you got your token you can check that your node is running and syncing from
 
     curl http://localhost:8080/v2/status -H "X-Algo-API-Token:<your_token_here>"
     
-### Algorand SDKs and API references
+The complete REST API documentation for algorand can be found here: https://developer.algorand.org/docs/rest-apis/algod/v2/ 
+
+### Algorand SDKs
 
 Algorand provides developers with SDKs to interact with the network by connecting to your node, this will allow you to submit requests and transactions. They also contain methods to help construct and sign transactions, encoding/decoding addresses and mnemonics, etc. 
 
