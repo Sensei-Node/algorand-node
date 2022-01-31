@@ -3,7 +3,7 @@ Docker build for quick node deployment of the Algorand Blockchain.
 
 ### Build
     git clone https://github.com/Sensei-Node/algorand_node
-    cd algorand/node
+    cd algorand_node/algorand/node
     docker build -t algo_node:latest .
 
 ### Run
