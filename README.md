@@ -1,35 +1,65 @@
 # Algorand Node Docker
-Docker build for quick node deployment of the Algorand Blockchain.
+Docker build for quick node deployment of the Algorand blockchain.
 
 ### Build
-    git clone https://github.com/Sensei-Node/algorand_node
-    cd algorand_node/algorand/node
-    docker build -t algo_node:latest .
 
-### Run
+- Clone the repository:
 
-    docker run -itd -p 8080:8080 --name algo_node algo_node:latest
+```shell
+git clone https://github.com/Sensei-Node/algorand-node.git
+```
 
-### Run from image
+- Navigate to the `node` folder:
 
-A compiled version is available on Docker Hub: https://hub.docker.com/r/senseinode/algorand
+```shell
+cd algorand-node/algorand/node
+```
+
+- Run docker command:
+
+```shell
+docker build -t algo_node:latest .
+```
+
+### Docker run
+
+```shell
+docker run -itd -p 8080:8080 --name algo_node algo_node:latest
+```
+
+### Docker run from image
+
+A compiled version is available on Docker Hub [here](https://hub.docker.com/r/senseinode/algorand)
 
 You can run this version with the pre-configured docker-compose.yml found in the algorand folder:
 
-    cd algorand
-    docker-compose up -d
+- Navigate to the `algorand` folder:
+
+```shell
+cd algorand
+```
+
+- Run docker compose command to raise the container in the background with:
+
+```shell
+docker-compose up -d
+```
 
 ### Get algod.token
 
-For RPC usage you will need the algod.token of the node, you can get this token by running:
+- For RPC usage you will need the algod.token of the node, you can get this token by running:
 
-    docker exec -it algo_node cat data/algod.token
+```shell
+docker exec -it algo_node cat data/algod.token
+```
 
-Once you got your token you can check that your node is running and syncing from the latest catchup point:
+- Once you got your token you can check that your node is running and syncing from the latest catchup point:
 
-    curl http://localhost:8080/v2/status -H "X-Algo-API-Token:<your_token_here>"
-    
-The complete REST API documentation for algorand can be found here: https://developer.algorand.org/docs/rest-apis/algod/v2/ 
+```shell
+curl http://localhost:8080/v2/status -H "X-Algo-API-Token:<your_token_here>"
+```
+
+The complete `REST API` documentation for algorand can be found [here](https://developer.algorand.org/docs/rest-apis/algod/v2/)
 
 ### Algorand SDKs
 
@@ -39,6 +69,12 @@ Algorand provides developers with SDKs to interact with the network by connectin
 
 [JavaScript](https://developer.algorand.org/docs/sdks/javascript/)
 
-[GO](https://developer.algorand.org/docs/sdks/go/)
+[Go](https://developer.algorand.org/docs/sdks/go/)
 
 [Java](https://developer.algorand.org/docs/sdks/java/)
+
+# Contributing
+ 
+- Contributions are welcome. Feel free to suggest improvements!
+
+Made with ❤️ by [Sensei Team](https://github.com/orgs/Sensei-Node/people)
