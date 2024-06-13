@@ -72,3 +72,9 @@ Algorand provides developers with SDKs to interact with the network by connectin
 [Go](https://developer.algorand.org/docs/sdks/go/)
 
 [Java](https://developer.algorand.org/docs/sdks/java/)
+
+# Contributing
+ 
+- Contributions are welcome. Feel free to suggest improvements!
+
+Made with ❤️ by [Sensei Team](https://github.com/orgs/Sensei-Node/people)
